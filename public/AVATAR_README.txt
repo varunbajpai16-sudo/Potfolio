@@ -1,0 +1,1 @@
+The hero currently uses avatar-reference.jpg, cropped from the approved UI mockup for closer visual matching. Replace it with a standalone transparent avatar render or a photo-based stylized avatar for a cleaner final result.

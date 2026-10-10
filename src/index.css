@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root { font-family: Inter, ui-sans-serif, system-ui, sans-serif; color-scheme: dark; scroll-behavior: smooth; }
+html { scroll-behavior: smooth; background: #050505; }
+body { margin: 0; min-width: 320px; background: #050505; }
+::selection { background: rgba(239, 68, 68, .35); }
+.avatar-float { animation: avatarFloat 5.5s ease-in-out infinite; }
+.float-slow { animation: floatCard 6s ease-in-out infinite; }
+.float-slower { animation: floatCard 7s ease-in-out infinite reverse; }
+@keyframes avatarFloat { 0%,100% { transform: translate(-50%,-50%) translateY(0); } 50% { transform: translate(-50%,-50%) translateY(-10px); } }
+@keyframes floatCard { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation-duration: .01ms !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+
+.avatar-scene img { -webkit-mask-image: radial-gradient(ellipse 72% 74% at 50% 47%, #000 58%, transparent 100%); mask-image: radial-gradient(ellipse 72% 74% at 50% 47%, #000 58%, transparent 100%); }
+@media (min-width: 1024px) {
+  .hero-band { background: radial-gradient(ellipse at 76% 48%, rgba(105, 8, 17, .14), transparent 43%); }
+}
+@media (max-width: 1023px) {
+  .avatar-scene { max-width: 540px; }
+}
