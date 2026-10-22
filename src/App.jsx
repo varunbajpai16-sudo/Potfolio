@@ -33,6 +33,15 @@ const projects = [
     link: "https://mentor-owl.vercel.app/",
     number: "03",
   },
+  {
+    name: "Bhuvan GPT",
+    tag: "GEOSPATIAL AI INTELLIGENCE",
+    description: "An AI-powered geospatial assistant for exploring satellite imagery and geographic data with natural-language queries, including land-use analysis, disaster monitoring, water resources and urban planning.",
+    stack: ["React", "Leaflet", "LangChain", "LangGraph", "Geospatial AI"],
+    image: "/projects/bhuvan-gpt.png",
+    link: "https://bhuvan-gpt.vercel.app/",
+    number: "04",
+  },
 ];
 
 const skills = [
@@ -175,7 +184,7 @@ export default function App() {
               <div className="relative h-[190px] overflow-hidden border-b border-white/[.07] bg-[#090909]">
                 <img src={project.image} alt={`${project.name} website preview`} className="h-full w-full object-cover object-top opacity-90 transition duration-700 group-hover:scale-[1.035] group-hover:opacity-100" />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/10" />
-                <div className="absolute right-3 top-3 rounded-md border border-red-500/30 bg-black/75 px-2 py-1 text-[9px] font-semibold tracking-[.16em] text-red-300 backdrop-blur">{project.number} / 03</div>
+                <div className="absolute right-3 top-3 rounded-md border border-red-500/30 bg-black/75 px-2 py-1 text-[9px] font-semibold tracking-[.16em] text-red-300 backdrop-blur">{project.number} / 04</div>
                 <span className="absolute bottom-3 left-4 text-[9px] font-semibold tracking-[.18em] text-white/80">LIVE PROJECT PREVIEW</span>
               </div>
               <div className="p-5"><div className="mb-2 flex items-center justify-between gap-3"><span className="text-[9px] font-bold tracking-[.17em] text-red-400">{project.tag}</span><span className="text-xs text-neutral-600">{project.number}</span></div><h3 className="text-xl font-bold">{project.name}</h3><p className="mt-2 min-h-[68px] text-[12px] leading-[1.7] text-neutral-400">{project.description}</p><div className="mt-4 flex flex-wrap gap-1.5">{project.stack.map((item) => <span key={item} className="rounded-md border border-white/[.08] bg-white/[.035] px-2 py-1 text-[9px] text-neutral-300">{item}</span>)}</div><a href={project.link} target={project.link.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="mt-5 inline-flex items-center gap-2 text-xs font-semibold text-red-300 transition group-hover:text-red-200">Explore Project <ExternalLink size={12}/></a></div>
